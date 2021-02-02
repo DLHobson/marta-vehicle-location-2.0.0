@@ -1,0 +1,274 @@
+server:
+  port: 9090
+logging:
+  file:
+    name: F:\logs\rtvehicle.txt
+#    name: ./logs/rtvehicle.txt
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root: info
+spring:
+  application: 
+    name: MARTA Vehicle Location
+  boot: 
+    admin:
+      api-path: /instances
+      client:
+        enabled: true
+        period: 10000
+        url: http://localhost:9090
+        username: admin
+        password: admin
+        connect-timeout: 10000
+    security:
+    user:
+      name: admin
+      password: admin
+  profiles:
+    active:
+    - production
+  task:
+    execution:
+      thread-name-prefix: "RouterMessage-"
+      pool:
+        max-size: 11
+        core-size: 11
+        allow-core-thread-timeout: true
+        queue-capacity: 25
+        keep-alive: 1
+        threadwait: 5
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+heartbeat:
+  host: localhost
+  port: 1026
+  success-msg:  200-OK
+  failure-msg:  400-Bad-Request
+router:
+  message:
+    type: taip
+    size: 256
+  listener:
+    protocol: udp
+    ports: 
+      - 1400
+      - 1500
+      - 1600
+      - 1700
+      - 1800
+      - 1900
+      - 2300
+      - 2400
+      - 2500
+      - 7000
+  ftl:
+    primaryRealmServer: http://mcsmtftldev01:18080
+    userName: mcsmdevftladmin
+    password: WGXE01!FP#dwiJ9i
+    messageApp: vehiclelocation.app
+    messageEndpoint:  vehiclelocation.pub.ep
+    messageFormat: vehiclelocation.format
+    coreServers:
+      - http://mcsmtftldev01:18080
+      - http://mcsmtftldev02:18080
+      - http://mcsmtftldev03:18080
+    app:  
+      appName: VehicleLocation
+      msgType: Bus
+      msgSubtype: Realtime
+  router:
+    message:
+      kind: taip
+
+---
+
+spring:
+  profiles: workstation
+name: rtvehicle-dev
+environment: workstation
+
+logging:
+  file:
+    name: ./rtvehicle.txt
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root: info
+
+realm:
+  udp:
+    port: 1026
+    messageSize: 256
+  ftl:
+    primaryRealmServer: http://mcsmtftldev01:18080
+    userName: mcsmdevftladmin
+    password: WGXE01!FP#dwiJ9i
+    messageApp: vehiclelocation.app
+    messageEndpoint:  vehiclelocation.pub.ep
+    messageFormat: vehiclelocation.format
+    coreServers:
+      - http://mcsmtftldev01:18080
+    app:
+      appName: VehicleLocation
+      msgType: Bus
+      msgSubtype: Realtime
+  router:
+    message:
+      kind: taip
+---
+
+spring:
+  profiles: development
+name: rtvehicle-dev
+environment: development
+
+logging:
+  file:
+    name: F:\logs\rtvehicle.txt
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root: info
+
+realm:
+  udp:
+    port: 1026
+    messageSize: 256
+  ftl:
+    primaryRealmServer: http://mcsmtftldev01:18080
+    userName: mcsmdevftladmin
+    password: WGXE01!FP#dwiJ9i
+    messageApp: vehiclelocation.app
+    messageEndpoint:  vehiclelocation.pub.ep
+    messageFormat: vehiclelocation.format
+    coreServers:
+      - http://mcsmtftldev01:18080
+    app:
+      appName: VehicleLocation
+      msgType: Bus
+      msgSubtype: Realtime
+  router:
+    message:
+      kind: taip
+
+    
+---
+
+spring:
+  profiles: test
+name: rtvehicle-test
+environment: test
+
+logging:
+  file:
+    name: F:\logs\rtvehicle.txt
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root: info
+
+realm:
+  udp:
+    port: 32170
+    messageSize: 256
+  ftl:
+    primaryRealmServer: http://mcsmtftlqa01:28080
+    userName: mcsmdevftladmin
+    password: WGXE01!FP#dwiJ9i
+    messageApp: vehiclelocation.app
+    messageEndpoint:  vehiclelocation.pub.ep
+    messageFormat: vehiclelocation.format
+    coreServers:
+      - http://mcsmtftlqa01:28080
+    app:
+      appName: VehicleLocation
+      msgType: Bus
+      msgSubtype: Realtime
+  router:
+    message:
+      kind: taip
+  
+---
+
+spring:
+  profiles: staging
+name: rtvehicle-stg
+environment: staging
+
+logging:
+  file:
+    name: F:\logs\rtvehicle.txt
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root: info
+
+realm:
+  udp:
+    port: 32170
+    messageSize: 256
+  ftl:
+    primaryRealmServer: http://mcsmtftlstg01:18080
+    userName: mcsmdevftladmin
+    password: WGXE01!FP#dwiJ9i
+    messageApp: vehiclelocation.app
+    messageEndpoint:  vehiclelocation.pub.ep
+    messageFormat: vehiclelocation.format
+    coreServers:
+      - http://mcsmtftlstg01:18080
+      - http://mcsmtftlstg02:18080
+      - http://mcsmtftlstg03:18080
+    app:
+      appName: VehicleLocation
+      msgType: Bus
+      msgSubtype: Realtime
+  router:
+    message:
+      kind: taip
+  
+---
+
+spring:
+  profiles: production
+name: rtvehicle-prod
+environment: production
+
+logging:
+  file:
+    name: F:\logs\rtvehicle.txt
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root: info
+
+realm:
+  udp:
+    port: 32170
+    messageSize: 256
+  ftl:
+    primaryRealmServer: http://mcsmtftlprod01:48080|http://mcsmtftlprod02:48080|http://mcsmtftlprod03:48080
+    userName: mcsmprodftladmin
+    password: lw5Dyuzyupu!lUhk
+    messageApp: mcsm.vehiclelocation.app
+    messageEndpoint:  mcsm.vehiclelocation.pub.ep
+    messageFormat: mcsm.app.vehiclelocation.msg.format
+    coreServers:
+      - http://mcsmtftlprod01:48080
+      - http://mcsmtftlprod02:48080
+      - http://mcsmtftlprod03:48080
+    app:
+      appName: VehicleLocation
+      msgType: Bus
+      msgSubtype: Realtime
+  router:
+    message:
+      kind: taip
+
+

@@ -1,0 +1,129 @@
+2021-01-15 00:23:14.566  INFO 94717 --- [           main] i.m.MartaVehicleLocationApplicationTests : Starting MartaVehicleLocationApplicationTests on MacBook-Pro.attlocal.net with PID 94717 (started by thinker in /Users/thinker/development/marta-vehicle-location 5)
+2021-01-15 00:23:14.623  INFO 94717 --- [           main] i.m.MartaVehicleLocationApplicationTests : The following profiles are active: workstation
+2021-01-15 00:23:16.762  INFO 94717 --- [           main] c.i.t.i.m.c.AsynchConfiguration          : AsynchConfiguration instantiated
+2021-01-15 00:23:16.762  INFO 94717 --- [           main] c.i.t.i.m.c.AsynchConfiguration          : AsynchConfiguration{threadNamePrefix='RouterMessage-', pool=Pool{maxSize=11, coreSize=11, allowCoreThreadTimeout=true, queueCapacity=25, keepAlive=1, threadWait=5}}
+2021-01-15 00:23:16.895  INFO 94717 --- [           main] c.i.t.i.m.c.RouterMessageConfiguration   : RouterMessageConfiguration instantiated
+2021-01-15 00:23:16.896  INFO 94717 --- [           main] c.i.t.i.m.c.RouterMessageConfiguration   : RouterMessageConfiguration{message=Message [type=taip, size=256], listener=Listener [protocol=udp, ports=[1400, 1500, 1600, 1700, 1800, 1900, 2300, 2400, 2500, 7000]]}
+2021-01-15 00:23:16.941  INFO 94717 --- [           main] c.i.t.i.m.c.RealmServerConfiguration     : RealmServerConfiguration instantiated
+2021-01-15 00:23:16.942  INFO 94717 --- [           main] c.i.t.i.m.c.RealmServerConfiguration     : RealmServerConfiguration{primaryRealmServer='http://mcsmtftldev01:18080', userName='mcsmdevftladmin', password='WGXE01!FP#dwiJ9i', messageApp='mcsm.app.busrealtime.sub', messageEndpoint='mcsm.app.busrealtime.sub.ep', messageFormat='mcsm.app.busrealtime.sub.format', app=App{appName='MCSM', msgType='Realtime', msgSubType='Bus'}}
+2021-01-15 00:23:16.989  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : List to hashmap{0=true, 1600=true, 2400=true, 1700=true, 2500=true, 1400=true, 1800=true, 7000=true, 1500=true, 1900=true, 2300=true}
+2021-01-15 00:23:17.057  INFO 94717 --- [           main] c.i.t.i.m.c.AsynchConfiguration$Pool     : Pool instantiated
+2021-01-15 00:23:17.060  INFO 94717 --- [           main] c.i.t.i.m.c.AsynchConfiguration$Pool     : Pool{maxSize=11, coreSize=11, allowCoreThreadTimeout=true, queueCapacity=25, keepAlive=1, threadWait=5}
+2021-01-15 00:23:19.061  INFO 94717 --- [           main] i.m.MartaVehicleLocationApplicationTests : Started MartaVehicleLocationApplicationTests in 5.452 seconds (JVM running for 11.422)
+2021-01-15 00:23:19.081  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.084  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.084  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.084  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 1600=true
+2021-01-15 00:23:19.084  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.085  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.085  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 1600
+2021-01-15 00:23:19.085  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.085  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(1600) Asynchronously
+2021-01-15 00:23:19.089  INFO 94717 --- [RouterMessage-1] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(1600)
+2021-01-15 00:23:19.095  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.097  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.097  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.097  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 2400=true
+2021-01-15 00:23:19.097  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.098  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.100  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 2400
+2021-01-15 00:23:19.100  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.100  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(2400) Asynchronously
+2021-01-15 00:23:19.101  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.101  INFO 94717 --- [RouterMessage-2] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(2400)
+2021-01-15 00:23:19.101  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.101  INFO 94717 --- [RouterMessage-1] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 1600
+2021-01-15 00:23:19.101  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.101  INFO 94717 --- [RouterMessage-2] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 2400
+2021-01-15 00:23:19.101  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 1700=true
+2021-01-15 00:23:19.101  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.102  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.102  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 1700
+2021-01-15 00:23:19.102  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.102  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(1700) Asynchronously
+2021-01-15 00:23:19.103  INFO 94717 --- [RouterMessage-3] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(1700)
+2021-01-15 00:23:19.103  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.103  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.103  INFO 94717 --- [RouterMessage-3] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 1700
+2021-01-15 00:23:19.103  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.104  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 2500=true
+2021-01-15 00:23:19.104  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.104  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.104  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 2500
+2021-01-15 00:23:19.104  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.104  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(2500) Asynchronously
+2021-01-15 00:23:19.105  INFO 94717 --- [RouterMessage-4] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(2500)
+2021-01-15 00:23:19.105  INFO 94717 --- [RouterMessage-4] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 2500
+2021-01-15 00:23:19.105  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.105  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.106  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.106  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 1400=true
+2021-01-15 00:23:19.106  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.106  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.106  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 1400
+2021-01-15 00:23:19.106  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.107  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(1400) Asynchronously
+2021-01-15 00:23:19.107  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.107  INFO 94717 --- [RouterMessage-5] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(1400)
+2021-01-15 00:23:19.107  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.108  INFO 94717 --- [RouterMessage-5] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 1400
+2021-01-15 00:23:19.108  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.108  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 1800=true
+2021-01-15 00:23:19.108  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.108  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.108  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 1800
+2021-01-15 00:23:19.109  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.109  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(1800) Asynchronously
+2021-01-15 00:23:19.110  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.110  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.110  INFO 94717 --- [RouterMessage-6] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(1800)
+2021-01-15 00:23:19.110  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.110  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 7000=true
+2021-01-15 00:23:19.110  INFO 94717 --- [RouterMessage-6] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 1800
+2021-01-15 00:23:19.110  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.110  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.111  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 7000
+2021-01-15 00:23:19.111  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.111  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(7000) Asynchronously
+2021-01-15 00:23:19.113  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.113  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.113  INFO 94717 --- [RouterMessage-7] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(7000)
+2021-01-15 00:23:19.113  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.113  INFO 94717 --- [RouterMessage-7] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 7000
+2021-01-15 00:23:19.114  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 1500=true
+2021-01-15 00:23:19.114  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.114  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.115  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 1500
+2021-01-15 00:23:19.115  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.115  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(1500) Asynchronously
+2021-01-15 00:23:19.116  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.116  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.116  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.117  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 1900=true
+2021-01-15 00:23:19.117  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.117  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.117  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 1900
+2021-01-15 00:23:19.117  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.117  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(1900) Asynchronously
+2021-01-15 00:23:19.117  INFO 94717 --- [RouterMessage-8] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(1500)
+2021-01-15 00:23:19.117  INFO 94717 --- [RouterMessage-8] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 1500
+2021-01-15 00:23:19.118  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.118  INFO 94717 --- [RouterMessage-9] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(1900)
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.119  INFO 94717 --- [RouterMessage-9] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 1900
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entry: 2300=true
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Returning port: 2300
+2021-01-15 00:23:19.119  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
+2021-01-15 00:23:19.120  INFO 94717 --- [           main] c.i.t.i.martavehiclelocation.AppRunner   : Calling: ReceiveRouterMessageService.receiveRouterMessage(2300) Asynchronously
+2021-01-15 00:23:19.120  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering: retrieveNextAvailablePort()
+2021-01-15 00:23:19.121  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock acquired
+2021-01-15 00:23:19.121  INFO 94717 --- [outerMessage-10] c.i.t.i.m.s.impl.RouterMessageService    : Entering: receiveRouterMessage(2300)
+2021-01-15 00:23:19.121  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Entering critical section
+2021-01-15 00:23:19.121  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting critical section
+2021-01-15 00:23:19.121  INFO 94717 --- [outerMessage-10] c.i.t.i.m.s.impl.RouterMessageService    : Listening for datagram packet on port: 2300
+2021-01-15 00:23:19.121  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Lock released
+2021-01-15 00:23:19.121  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : No port available.  Try again.
+2021-01-15 00:23:19.121  INFO 94717 --- [           main] c.i.t.i.m.service.impl.PortAllocService  : Exiting: retrieveNextAvailablePort()
